@@ -27,8 +27,6 @@ class City():
 
 
 cities = []
-print("cities dictionsary")
-print(cities)
 
 
 def cityreader(cities=[]):
@@ -41,12 +39,12 @@ def cityreader(cities=[]):
         line_count = 0
         for row in csv_reader:
             if line_count == 0:
-                print(f'Column names are {", ".join(row)}')
                 line_count += 1
-            City((row["city"], float(row["lat"]), float(row["lng"])))
+            cities.append(City(row["city"], float(
+                row["lat"]), float(row["lng"])))
             line_count += 1
 
-        return cities
+    return cities
 
 
 cityreader(cities)

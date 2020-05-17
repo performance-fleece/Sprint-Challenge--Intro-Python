@@ -20,10 +20,12 @@
 
 
 class Vehicle:
+    # Base of all vehicles
     pass
 
 
 class FlightVehicle(Vehicle):
+    # Base of Starship, Airplane
     pass
 
 
@@ -36,6 +38,7 @@ class Airplane(FlightVehicle):
 
 
 class GroundVehicle(Vehicle):
+    # Base of Car, Motorcycle
     pass
 
 
